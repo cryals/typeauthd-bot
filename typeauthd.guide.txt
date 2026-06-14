@@ -1,0 +1,143 @@
+API Routes
+Jerry edited this page on Mar 21, 2025 · 4 revisions
+
+Discord Developer Docs: https://discord.com/developers/docs/
+
+Table Of Contents
+Api
+UUID
+Identify
+Roles
+Guilds
+Extra
+Patch Extra
+Delete
+Link
+Api
+UUID
+Back to top
+
+Returns UserID by DiscordID
+
+GET /api/uuid
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Response JSON
+{
+    "uuid": "UUIDHERE"
+}
+Identify
+Back to top
+
+Returns identify scope from discord as JSON
+
+GET /api/identify
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Response JSON
+{
+    read discord docs...
+}
+Roles
+Back to top
+
+Returns roles of the user at certain guild.
+
+GET /api/roles
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+guildId	String	Guild ID of the server to return roles from.
+Authorization
+Authorization: Bearer TOKEN
+
+Response JSON
+{
+    read discord docs...
+}
+Guilds
+Back to top
+
+Returns guilds of the user.
+
+GET /api/guilds
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Response JSON
+{
+    read discord docs...
+}
+Extra
+Back to top
+
+Returns extra data of the user.
+
+GET /api/extra
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Response JSON
+Extra data as JSON
+
+Patch Extra
+Back to top
+
+Patches user's extra data.
+
+PATCH /api/extra
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Delete
+Back to top
+
+Deletes user record from database.
+
+POST /api/delete
+Request URL Parameters
+Name	Type	Description
+method	String	Method to search for record in database. uid or discord, this one influences on what value id is waiting for.
+id	String	ID to search record by in database. Set this according to method
+Authorization
+Authorization: Bearer TOKEN
+
+Link
+Back to top
+
+Generates link for authorization according to provided UUID.
+
+GET /api/link
+Request URL Parameters
+Name	Type	Description
+uid	String	UserID from external app to generate link with
+Authorization
+None
+
+Reponse JSON
+{
+    "link": "AUTHORIZATION_LINK"
+}
